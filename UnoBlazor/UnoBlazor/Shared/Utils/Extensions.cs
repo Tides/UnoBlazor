@@ -16,5 +16,7 @@ namespace UnoBlazor.Shared.Utils
 
         public static string ToSnakeCase(this string value) =>
             string.Concat(value.Select((x, i) => i > 0 && char.IsUpper(x) ? "_" + x.ToString() : x.ToString())).ToLower();
+
+        public static bool EqualsIgnoreCase(this string value, string compareTo) => value.Equals(compareTo, System.StringComparison.OrdinalIgnoreCase);
     }
 }

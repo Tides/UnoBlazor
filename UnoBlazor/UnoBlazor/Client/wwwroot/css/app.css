@@ -1,1 +1,204 @@
-﻿
+﻿@import url('https://fonts.googleapis.com/css?family=Exo+2&display=swap');
+
+body {
+    font-family: 'Exo 2', sans-serif !important;
+}
+
+.uno-ui {
+    background-color: #E6E6E6;
+    border-radius: 16px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .4);
+    padding: 13px;
+}
+
+.uno-ui > form > * {
+    margin: 4px 0;
+}
+
+.uno-ui * input[type="text"]::placeholder {
+    text-align: center;
+}
+
+.uno-ui * input[type="text"] {
+    border-radius: 10px;
+}
+
+.uno-ui * button {
+    border-radius: 10px;
+    width: 100%;
+    padding: 4px 0;
+}
+
+.uno-ui > p {
+    color: #666666;
+    margin-bottom: 0;
+}
+
+/* Title */
+
+.titlescreen * .title {
+    font-size: 60pt;
+    color: #404040;
+    text-align: center;
+}
+
+.titlescreen {
+    align-items: center;
+    min-height: 100%; /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh;
+    display: flex;
+}
+
+/* Lobby */
+
+.lobbyscreen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.lobbyscreen > .row {
+    flex: auto;
+}
+
+.lobbyscreen > .row > div {
+    padding-bottom: 15px;
+}
+
+.lobbyscreen > .title {
+    font-size: 60pt;
+    color: #404040;
+    text-align: left;
+}
+
+.lobbyscreen * .uno-ui.lobbystatus {
+    margin-top: 15px;
+}
+
+.lobbyscreen * .uno-ui.lobbystatus > p {
+    font-size: 3em;
+    text-align: center;
+}
+
+.lobbyscreen > div {
+    height: 100%;
+}
+
+.lobby-chat {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.lobby-chat > p {
+    border-radius: 10px;
+    background-color: white;
+    padding: 13px;
+    flex: auto;
+}
+
+.lobbysecondcol {
+    display: flex;
+    flex-direction: column;
+}
+
+.lobbyplayerlist {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.lobbyplayerlist > p {
+    flex: auto;
+    border-radius: 10px;
+    background-color: white;
+    padding: 13px;
+    height: 100%;
+}
+
+/* Game */
+
+/* Generic Hand */
+
+.hand {
+    position: relative;
+    left: -50%;
+    display: flex;
+    flex-direction: row-reverse;
+    place-content: center;
+    align-items: baseline;
+    filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.4))
+}
+
+/* Overlay cards on one another */
+.hand > img {
+    width: 16vh;
+    margin-left: -6vh;
+    -webkit-user-drag: none;
+}
+
+/* Remove extra overlay for the left most card
+ (this causes the hand to not be centered) */
+.hand > img:last-child {
+    margin-left: 0vh;
+}
+
+
+/* Main Hand */
+.mainplayer {
+    position: absolute;
+    left: 50%;
+    bottom: 2vh;
+}
+
+/* Make the card bigger when you hover over it */
+.mainplayer > .hand > img:hover {
+    width: 20vh;
+    margin-left: -5vh;
+}
+
+/* Opponent */
+.opponent {
+    position: absolute;
+    left: 50%;
+    top: 2vh;
+}
+
+/* Card Deck */
+.carddeck {
+    position: absolute;
+    right: 15vw;
+    top: 50vh;
+    filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.4))
+}
+
+.carddeck > img {
+    width: 16vh;
+    position: relative;
+    transform: translateY(-50%);
+}
+
+/* Discard Pile */
+.discardpile {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.4))
+}
+
+.discardpile > img {
+    width: 16vh;
+    position: absolute;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+/* Special stuff */
+
+.heldcard {
+    position: absolute;
+}
+
+.heldcard > img {
+    width: 16vh;
+    -webkit-user-drag: none;
+}
