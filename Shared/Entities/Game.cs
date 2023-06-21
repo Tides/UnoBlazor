@@ -1,5 +1,5 @@
 ﻿namespace UnoBlazor.Shared.Entities;
 public class Game
 {
-    //Player, Lobby
+    //Player, Lobby, GameState
 }
