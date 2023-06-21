@@ -1,0 +1,18 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+@url=https://2pzhxxc8-7276.use.devtunnels.ms
+
+GET {{url}}/WeatherForecast
+
+###
+
+POST {{url}}/Movie/create
+Content-Type: application/json
+
+{
+    "Name": "Test Movie",
+    "Description": "Such a good movie"
+}
+
+###
+
+GET {{url}}/Movie/84122593-f7d7-4f11-8895-38283b58a835

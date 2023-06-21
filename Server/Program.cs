@@ -1,13 +1,20 @@
-using Microsoft.AspNetCore.ResponseCompression;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+builder.Services.AddSignalR();
 
 var app = builder.Build();
+
+using var scope = app.Services.CreateScope();
+
+var loggerFactory = scope.ServiceProvider.GetService<ILoggerFactory>();
+
+var logger = loggerFactory.CreateLogger("App");
+
+logger.LogInformation("Tunnel URL: {tunnelUrl}", Environment.GetEnvironmentVariable("VS_TUNNEL_URL"));
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -27,7 +34,6 @@ app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
 
 app.UseRouting();
-
 
 app.MapRazorPages();
 app.MapControllers();

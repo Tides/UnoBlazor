@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnoBlazor.Server", "Server\UnoBlazor.Server.csproj", "{A621E0E2-78BF-4D16-B025-B6F2B4169224}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnoBlazor.Server", "Server\UnoBlazor.Server.csproj", "{A621E0E2-78BF-4D16-B025-B6F2B4169224}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnoBlazor.Client", "Client\UnoBlazor.Client.csproj", "{07E91CE8-0D2A-4345-9EC9-B6F46F0DE468}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnoBlazor.Client", "Client\UnoBlazor.Client.csproj", "{07E91CE8-0D2A-4345-9EC9-B6F46F0DE468}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnoBlazor.Shared", "Shared\UnoBlazor.Shared.csproj", "{84A9C984-425D-4616-84A3-1E36462EEEE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnoBlazor.Shared", "Shared\UnoBlazor.Shared.csproj", "{84A9C984-425D-4616-84A3-1E36462EEEE7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
